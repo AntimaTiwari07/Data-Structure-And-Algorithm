@@ -44,9 +44,9 @@ class Solution {
 public:
     vector<int> xorQueries(vector<int>& arr, vector<vector<int>>& queries) {
         vector<int>v;
-      //to traverse each element
+      //to traverse each element by taking size of queries
       for(int i = 0;i<queries.size();i++){
-        //find xor of each element 
+        //find xor of each element if both left and right are equal then
         if(queries[i][0]==queries[i][1]){
               v.push_back(arr[queries[i][0]]);
         }
@@ -54,9 +54,12 @@ public:
         else{
              int m = arr[queries[i][0]] ;
       for(int j = queries[i][0];j<queries[i][1];j++){
-             m = m ^ (arr[j+1]);
+             m = m ^ (arr[j+1]);// ^ is a XOR operator 
+             //in this 2 same bit give 0 while diff give 1 
       }
-      v.push_back(m);
+      v.push_back(m);//use vector to store element 
+      //because inn this we not have to give size of array 
+      //we just simply use it
         }
         
        }
