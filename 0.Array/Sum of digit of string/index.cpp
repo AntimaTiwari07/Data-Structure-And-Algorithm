@@ -52,7 +52,9 @@ public:
         long long rem = 0;
          int temp = 0;
      for(int i=0;i<s.length();i++){
+      //to convert ASCII value into int value
         int x =s[i]-96;
+   //number greater then 9
          if(x>9){
             int temp =0;
             while(x!=0){
