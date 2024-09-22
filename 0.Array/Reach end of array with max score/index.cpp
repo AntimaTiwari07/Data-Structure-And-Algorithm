@@ -46,6 +46,7 @@ public:
     long long findMaximumScore(vector<int>& nums) {
         long long  i=0;
         long long j = 1;
+     //to find score
         long long sc  = 0;
        while((j<nums.size())){
         if(j==nums.size()-1) sc = sc +(nums.size()-1-i)*nums[i];

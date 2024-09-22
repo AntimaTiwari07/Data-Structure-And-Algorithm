@@ -38,17 +38,18 @@ public:
     int findContentChildren(vector<int>& g, vector<int>& s) {
     sort(s.begin(),s.end());
         sort(g.begin(),g.end());
-        int i = 0;
-        int j = 0;
-        int c=0;
-        while((j<s.size())&&(i<g.size())){
+        int start = 0;
+        int start_ = 0;
+        int cont=0;
+        while((start_<s.size())&&(start<g.size())){
+         //if cookie's size is greater then children need
             if(s[j]>=g[i]){
-                c++;
-                i++;
+                count++;
+                start++;
             }
-            j++;
+            start_++;
         }
-        return c;
+        return count;
     }
 };
 int main(){
