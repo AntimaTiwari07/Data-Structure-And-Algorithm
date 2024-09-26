@@ -47,17 +47,17 @@ public:
         long long  i=0;
         long long j = 1;
      //to find score
-        long long sc  = 0;
+        long long score  = 0;
        while((j<nums.size())){
-        if(j==nums.size()-1) sc = sc +(nums.size()-1-i)*nums[i];
+        if(j==nums.size()-1) score = score +(nums.size()-1-i)*nums[i];
        else if(nums[j]>nums[i]){
-            sc = sc + ((j-i)*(nums[i]));
+            score = score + ((j-i)*(nums[i]));
          i=j;
         }
         j++;
        }
 
-        return sc;
+        return score;
     }
 };
 int main(){
